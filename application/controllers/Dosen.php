@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Dosen extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,10 +18,31 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function list()
 	{
 		$this->load->view('layout/header');
-		$this->load->view('tampilan_home');
+		$this->load->view('dosen/list_dosen');
+		$this->load->view('layout/footer');
+	}
+
+	public function add()
+	{
+		$this->load->view('layout/header');
+		$this->load->view('dosen/add_dosen');
+		$this->load->view('layout/footer');
+	}
+
+	public function edit()
+	{
+		$this->load->view('layout/header');
+		$this->load->view('dosen/edit_dosen');
+		$this->load->view('layout/footer');
+	}
+
+	public function profil()
+	{
+		$this->load->view('layout/header');
+		$this->load->view('dosen/profil_dosen');
 		$this->load->view('layout/footer');
 	}
 

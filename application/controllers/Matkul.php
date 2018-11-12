@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Matkul extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,12 +18,26 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function list()
 	{
 		$this->load->view('layout/header');
-		$this->load->view('tampilan_home');
+		$this->load->view('mata_kuliah/list_matkul');
 		$this->load->view('layout/footer');
 	}
+
+	public function add()
+	{
+		$this->load->view('layout/header');
+		$this->load->view('mata_kuliah/add_matkul');
+		$this->load->view('layout/footer');
+	}
+
+	public function edit()
+	{
+		$this->load->view('layout/header');
+		$this->load->view('mata_kuliah/edit_matkul');
+		$this->load->view('layout/footer');
+	}	
 
 	public function view($view)
 	{
